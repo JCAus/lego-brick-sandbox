@@ -1,0 +1,187 @@
+body{
+    background-color: rgba(93, 255, 136, 0.616);
+}
+#blockChoice{
+    display:inline-block;
+    justify-content: center;
+    align-items: center;
+    margin:20px;
+    border-radius: 2px;
+    border: dashed 2px aquamarine;
+    top: 200px;
+    position: relative;
+    background-color: white;
+    
+}
+
+#lego:active{
+    cursor: grab;
+}
+
+#lego{
+    border: solid black 1px;
+    background-color: rgb(255, 0, 0);
+}
+
+#legoLeftEnd{
+    border-left: solid black 1px;
+    border-right: solid red 1px;
+    background-color: red;
+    border-top: solid black 1px;
+    border-bottom: solid black 1px;
+}
+
+#legoRightEnd{
+    border-left: solid red 1px;
+    border-right: solid black 1px;
+    background-color: red;
+    border-top: solid black 1px;
+    border-bottom: solid black 1px;
+}
+
+#legoMiddle{
+    border-left: solid red 1px;
+    border-right: solid red 1px;
+    background-color: red;
+    border-top: solid black 1px;
+    border-bottom: solid black 1px;
+}
+
+
+
+.block1{
+    position: relative;
+    display: relative;
+    width: 10px;
+    height: 12px;
+    left:44%;
+    margin: 5px;
+    transition: all .2s;
+}
+.block2{
+    display: relative;
+    width: 22px;
+    height: 12px;
+    position: relative;
+    margin: 5px;
+    left:39%;
+    transition: all .2s;
+}
+.block3{
+    display: relative;
+    width: 46px;
+    height: 12px;
+    position: relative;
+    margin: 5px;
+    left: 29%;
+    transition: all .2s;
+}
+.block4{
+    display: relative;
+    width: 70px;
+    height: 12px;
+    position: relative;
+    margin: 5px;
+    left:19%;
+    transition: all .2s;
+}
+.block5{
+    display: relative;
+    width: 94px;
+    height: 12px;
+    position: relative;
+    margin: 5px;
+    left:10%;
+    transition: all .2s;
+}
+.block6{
+    display: relative;
+    width: 118px;
+    height: 12px;
+    position: relative;
+    margin: 5px;
+    transition: all .2s;
+}
+
+#sandbox{
+    position: absolute;
+    left:200px;
+    top:28px;
+    height: 628px;
+    width: 1309px;
+    border: dashed 2px aquamarine;
+    line-height: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.712);
+}
+
+.pixel{
+    display: inline-block;
+    height:12px;
+    width:10px;
+    padding: 0%;
+    border: 1px solid white;
+    
+    
+}
+
+.highlight{
+    border: 1px dotted rgb(255, 98, 0);
+}
+
+.clear{
+    position: absolute;
+    left:44px;
+    top:370px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+.colorPicker{
+    position: absolute;
+    top: 400px;
+    left:25px;
+}
+#color{
+    position: relative;
+    height: 20px;
+    
+}
+
+.bottomGlow{
+    border-bottom: solid 1px rgb(255, 215, 15);
+    background-image: linear-gradient(rgba(0,0,0,0)15%, rgba(255, 241, 170, 0.7) 50%,  rgba(255, 215, 15, 0.9));
+}
+
+.white{
+    background-color: white;
+}
+
+.gray{
+    background-color: gray;
+}
+
+.black{
+    background-color: black;
+}
+
+.red{
+    background-color: red;
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+.green{
+    background-color: green;
+}
+
+.blue{
+    background-color: blue;
+}
+
+
+
+
