@@ -156,12 +156,12 @@ body{
 
 .white{
     background-color: white;
-    border: 1px solid black
+    border: none;
 }
 
 .silver{
     background-color: silver;
-    border: 2px solid black
+    border: none;
 }
 
 .black{
@@ -171,22 +171,22 @@ body{
 
 .red{
     background-color: red;
-    border: 1px solid black
+    border: none;
 }
 
 .yellow{
     background-color: yellow;
-    border: 1px solid black
+    border: none;
 }
 
 .green{
     background-color: green;
-    border: 1px solid black
+    border: none;
 }
 
 .blue{
     background-color: blue;
-    border: 1px solid black
+    border: none;
 }
 
 
