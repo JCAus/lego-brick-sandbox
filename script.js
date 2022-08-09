@@ -157,7 +157,7 @@ function dragleave(e){
     e.preventDefault();
     e.target.classList.remove('highlight')
     for(let space of spaces){
-        space.classList.remove('bottomGlow')
+        space.classList.remove('bottomGlow');
     }
 }
 
@@ -171,8 +171,8 @@ function dragdrop(e){
     for(let space of spaces){
         space.classList.remove('bottomGlow')
     }
-    let idNum = (spaces.indexOf(e.target) + 109);
-
+    let idNumUnder = (spaces.indexOf(e.target) + 109);
+    let idNumOver = (spaces.indexOf(e.target) - 109);
     
         
     
@@ -182,7 +182,7 @@ function dragdrop(e){
         e.target.setAttribute('id', 'lego');
         e.target.classList.add('placed');
         e.target.style.backgroundColor = brick.style.backgroundColor;
-        console.log(idNum);
+        console.log(idNumUnder);
     }
 
     else if(e.target.classList.contains('row44') && brick2 === true ){
@@ -197,7 +197,7 @@ function dragdrop(e){
         
         
         
-        console.log(idNum);
+        console.log(idNumUnder);
     }
 
     else if(e.target.classList.contains('row44') && brick3 === true ){
@@ -222,7 +222,7 @@ function dragdrop(e){
         
         
         
-        console.log(idNum);
+        console.log(idNumUnder);
     }
 
     else if(e.target.classList.contains('row44') && brick4 === true ){
@@ -257,7 +257,7 @@ function dragdrop(e){
         
         
         
-        console.log(idNum);
+        console.log(idNumUnder);
     }
 
     else if(e.target.classList.contains('row44') && brick5 === true ){
@@ -302,7 +302,7 @@ function dragdrop(e){
         
         
         
-        console.log(idNum);
+        console.log(idNumUnder);
     }
 
     else if(e.target.classList.contains('row44') && brick6 === true ){
@@ -357,23 +357,25 @@ function dragdrop(e){
         
         
         
-        console.log(idNum);
+        console.log(idNumUnder);
     }
 
 
     else if(e.target && brick1 === true){
-        let myEl = spaces[idNum];
-        if(myEl.classList.contains('placed')){
+        let myElUnder = spaces[idNumUnder];
+        let overTarget = spaces[idNumOver];
+        if(myElUnder.classList.contains('placed') || overTarget.classList.contains('placed')){
             e.target.setAttribute('id', 'lego');
             e.target.classList.add('placed');
             e.target.style.backgroundColor = brick.style.backgroundColor;
-            console.log(idNum);}
+            console.log(idNumUnder);}
         
     }
 
     else if(e.target && brick2 === true){
-        let underTarget = spaces[idNum];
-        if(underTarget.classList.contains('placed')  || spaces[idNum - 1].classList.contains('placed')){
+        let underTarget = spaces[idNumUnder];
+        let overTarget = spaces[idNumOver];
+        if(underTarget.classList.contains('placed')  || spaces[idNumUnder - 1].classList.contains('placed') || overTarget.classList.contains('placed')  || spaces[idNumOver - 1].classList.contains('placed')){
             e.target.setAttribute('id', 'legoRightEnd');
         e.target.classList.add('placed');
         e.target.style.backgroundColor = brick.style.backgroundColor;
@@ -386,8 +388,9 @@ function dragdrop(e){
     }
     }
     else if(e.target && brick3 === true){
-        let underTarget = spaces[idNum];
-        if(underTarget.classList.contains('placed')  || spaces[idNum - 1].classList.contains('placed') || spaces[idNum - 2].classList.contains('placed') || spaces[idNum - 3].classList.contains('placed')){
+        let underTarget = spaces[idNumUnder];
+        let overTarget = spaces[idNumOver];
+        if(underTarget.classList.contains('placed')  || spaces[idNumUnder - 1].classList.contains('placed') || spaces[idNumUnder - 2].classList.contains('placed') || spaces[idNumUnder - 3].classList.contains('placed')    || overTarget.classList.contains('placed')  || spaces[idNumOver - 1].classList.contains('placed') || spaces[idNumOver - 2].classList.contains('placed') || spaces[idNumOver - 3].classList.contains('placed')){
             e.target.setAttribute('id', 'legoRightEnd');
         e.target.classList.add('placed');
         e.target.style.backgroundColor = brick.style.backgroundColor;
@@ -406,13 +409,14 @@ function dragdrop(e){
         spaces[spaces.indexOf(e.target) - 3].classList.add('placed');
         spaces[spaces.indexOf(e.target) - 3].style.backgroundColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 3].style.borderRightColor = brick.style.backgroundColor;
-            console.log(idNum);}
+            console.log(idNumUnder);}
         
     }
 
     else if(e.target && brick4 === true){
-        let underTarget = spaces[idNum];
-        if(underTarget.classList.contains('placed')  || spaces[idNum - 1].classList.contains('placed') || spaces[idNum - 2].classList.contains('placed') || spaces[idNum - 3].classList.contains('placed') || spaces[idNum - 4].classList.contains('placed') || spaces[idNum - 5].classList.contains('placed')){
+        let underTarget = spaces[idNumUnder];
+        let overTarget = spaces[idNumOver];
+        if(underTarget.classList.contains('placed')  || spaces[idNumUnder - 1].classList.contains('placed') || spaces[idNumUnder - 2].classList.contains('placed') || spaces[idNumUnder - 3].classList.contains('placed') || spaces[idNumUnder - 4].classList.contains('placed') || spaces[idNumUnder - 5].classList.contains('placed')    || overTarget.classList.contains('placed')  || spaces[idNumOver - 1].classList.contains('placed') || spaces[idNumOver - 2].classList.contains('placed') || spaces[idNumOver - 3].classList.contains('placed') || spaces[idNumOver - 4].classList.contains('placed') || spaces[idNumOver - 5].classList.contains('placed')){
             e.target.setAttribute('id', 'legoRightEnd');
         e.target.classList.add('placed');
         e.target.style.backgroundColor = brick.style.backgroundColor;
@@ -441,13 +445,14 @@ function dragdrop(e){
         spaces[spaces.indexOf(e.target) - 5].classList.add('placed');
         spaces[spaces.indexOf(e.target) - 5].style.backgroundColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 5].style.borderRightColor = brick.style.backgroundColor;
-            console.log(idNum);}
+            console.log(idNumUnder);}
         
     }
 
     else if(e.target && brick5 === true){
-        let underTarget = spaces[idNum];
-        if(underTarget.classList.contains('placed')  || spaces[idNum - 1].classList.contains('placed') || spaces[idNum - 2].classList.contains('placed') || spaces[idNum - 3].classList.contains('placed') || spaces[idNum - 4].classList.contains('placed') || spaces[idNum - 5].classList.contains('placed') || spaces[idNum - 6].classList.contains('placed') || spaces[idNum - 7].classList.contains('placed')){
+        let underTarget = spaces[idNumUnder];
+        let overTarget = spaces[idNumOver];
+        if(underTarget.classList.contains('placed')  || spaces[idNumUnder - 1].classList.contains('placed') || spaces[idNumUnder - 2].classList.contains('placed') || spaces[idNumUnder - 3].classList.contains('placed') || spaces[idNumUnder - 4].classList.contains('placed') || spaces[idNumUnder - 5].classList.contains('placed') || spaces[idNumUnder - 6].classList.contains('placed') || spaces[idNumUnder - 7].classList.contains('placed')    || overTarget.classList.contains('placed')  || spaces[idNumOver - 1].classList.contains('placed') || spaces[idNumOver - 2].classList.contains('placed') || spaces[idNumOver - 3].classList.contains('placed') || spaces[idNumOver - 4].classList.contains('placed') || spaces[idNumOver - 5].classList.contains('placed') || spaces[idNumOver - 6].classList.contains('placed') || spaces[idNumOver - 7].classList.contains('placed')){
             e.target.setAttribute('id', 'legoRightEnd');
         e.target.classList.add('placed');
         e.target.style.backgroundColor = brick.style.backgroundColor;
@@ -486,13 +491,14 @@ function dragdrop(e){
         spaces[spaces.indexOf(e.target) - 7].classList.add('placed');
         spaces[spaces.indexOf(e.target) - 7].style.backgroundColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 7].style.borderRightColor = brick.style.backgroundColor;
-            console.log(idNum);}
+            console.log(idNumUnder);}
         
     }
 
     else if(e.target && brick6 === true){
-        let underTarget = spaces[idNum];
-        if(underTarget.classList.contains('placed')  || spaces[idNum - 1].classList.contains('placed') || spaces[idNum - 2].classList.contains('placed') || spaces[idNum - 3].classList.contains('placed') || spaces[idNum - 4].classList.contains('placed') || spaces[idNum - 5].classList.contains('placed') || spaces[idNum - 6].classList.contains('placed') || spaces[idNum - 7].classList.contains('placed') || spaces[idNum - 8].classList.contains('placed') || spaces[idNum - 9].classList.contains('placed')){
+        let underTarget = spaces[idNumUnder];
+        let overTarget = spaces[idNumOver];
+        if(underTarget.classList.contains('placed')  || spaces[idNumUnder - 1].classList.contains('placed') || spaces[idNumUnder - 2].classList.contains('placed') || spaces[idNumUnder - 3].classList.contains('placed') || spaces[idNumUnder - 4].classList.contains('placed') || spaces[idNumUnder - 5].classList.contains('placed') || spaces[idNumUnder - 6].classList.contains('placed') || spaces[idNumUnder - 7].classList.contains('placed') || spaces[idNumUnder - 8].classList.contains('placed') || spaces[idNumUnder - 9].classList.contains('placed')    || overTarget.classList.contains('placed')  || spaces[idNumOver - 1].classList.contains('placed') || spaces[idNumOver - 2].classList.contains('placed') || spaces[idNumOver - 3].classList.contains('placed') || spaces[idNumOver - 4].classList.contains('placed') || spaces[idNumOver - 5].classList.contains('placed') || spaces[idNumOver - 6].classList.contains('placed') || spaces[idNumOver - 7].classList.contains('placed') || spaces[idNumOver - 8].classList.contains('placed') || spaces[idNumOver - 9].classList.contains('placed')){
             e.target.setAttribute('id', 'legoRightEnd');
         e.target.classList.add('placed');
         e.target.style.backgroundColor = brick.style.backgroundColor;
@@ -541,7 +547,7 @@ function dragdrop(e){
         spaces[spaces.indexOf(e.target) - 9].classList.add('placed');
         spaces[spaces.indexOf(e.target) - 9].style.backgroundColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 9].style.borderRightColor = brick.style.backgroundColor;
-            console.log(idNum);}
+            console.log(idNumUnder);}
         
     }
    
@@ -575,8 +581,8 @@ for(let i = 0; i<rows.length; i++){
 
 
 // function getID(e){
-//     let idNum = spaces.indexOf(e.target);
-//     return (idNum + 109);
+//     let idNumUnder = spaces.indexOf(e.target);
+//     return (idNumUnder + 109);
 //    } 
 
 
