@@ -156,30 +156,37 @@ body{
 
 .white{
     background-color: white;
+    border: 1px solid black
 }
 
-.gray{
-    background-color: gray;
+.silver{
+    background-color: silver;
+    border: 1px solid black
 }
 
 .black{
     background-color: black;
+    border: 1px solid black
 }
 
 .red{
     background-color: red;
+    border: 1px solid black
 }
 
 .yellow{
     background-color: yellow;
+    border: 1px solid black
 }
 
 .green{
     background-color: green;
+    border: 1px solid black
 }
 
 .blue{
     background-color: blue;
+    border: 1px solid black
 }
 
 
