@@ -146,7 +146,7 @@ body{
 #color{
     position: relative;
     height: 20px;
-    
+    border: 2px black solid;
 }
 
 .bottomGlow{
@@ -156,37 +156,37 @@ body{
 
 .white{
     background-color: white;
-    border: none;
+    
 }
 
 .silver{
     background-color: silver;
-    border: none;
+    
 }
 
 .black{
     background-color: black;
-    border: 1px solid black
+    
 }
 
 .red{
     background-color: red;
-    border: none;
+    
 }
 
 .yellow{
     background-color: yellow;
-    border: none;
+    
 }
 
 .green{
     background-color: green;
-    border: none;
+    
 }
 
 .blue{
     background-color: blue;
-    border: none;
+    
 }
 
 
