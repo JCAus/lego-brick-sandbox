@@ -184,7 +184,8 @@ function dragdrop(e){
         e.target.setAttribute('id', 'lego');
         e.target.classList.add('placed');
         e.target.style.backgroundColor = brick.style.backgroundColor;
-        
+        e.target.style.borderLeft = "1px solid black";
+        e.target.style.borderRight = "1px solid black";
         e.target.classList.add(`${legoNum}`);
         legoNum++;
     }
@@ -412,6 +413,8 @@ function dragdrop(e){
             e.target.setAttribute('id', 'lego');
             e.target.classList.add('placed');
             e.target.style.backgroundColor = brick.style.backgroundColor;
+            e.target.style.borderLeft = "1px solid black";
+            e.target.style.borderRight = "1px solid black";
             e.target.classList.add(`${legoNum}`);
             console.log(idNumUnder);}
         legoNum++;
