@@ -7,7 +7,7 @@ body{
     align-items: center;
     margin:20px;
     border-radius: 2px;
-    border: dashed 2px aquamarine;
+    border: dotted 2px rgb(245, 150, 41);
     top: 200px;
     position: relative;
     background-color: white;
@@ -109,7 +109,7 @@ body{
     top:28px;
     height: 628px;
     width: 1309px;
-    border: dashed 2px aquamarine;
+    border: dotted 2px rgb(245, 150, 41);
     line-height: 10px;
     justify-content: center;
     align-items: center;
