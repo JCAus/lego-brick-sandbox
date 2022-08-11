@@ -1,5 +1,5 @@
 body{
-    background-color: rgba(93, 255, 136, 0.616);
+    background-color: rgba(126, 135, 129, 0.616);
 }
 #blockChoice{
     display:inline-block;
@@ -113,7 +113,7 @@ body{
     line-height: 10px;
     justify-content: center;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.712);
+    background-color: rgba(255, 255, 255, 0.858);
 }
 
 .pixel{
