@@ -9,11 +9,13 @@ for(let i=1; i<=6; i++){
 }
 
 brick1 = false;
-    brick2 = false;
-    brick3 = false;
-    brick4 = false;
-    brick5 = false;
-    brick6 = false;
+brick2 = false;
+brick3 = false;
+brick4 = false;
+brick5 = false;
+brick6 = false;
+
+let legoNum = 1;
 
    
 
@@ -182,7 +184,9 @@ function dragdrop(e){
         e.target.setAttribute('id', 'lego');
         e.target.classList.add('placed');
         e.target.style.backgroundColor = brick.style.backgroundColor;
-        console.log(idNumUnder);
+        
+        e.target.classList.add(`${legoNum}`);
+        legoNum++;
     }
 
     else if(e.target.classList.contains('row44') && brick2 === true ){
@@ -190,13 +194,17 @@ function dragdrop(e){
         e.target.classList.add('placed');
         e.target.style.backgroundColor = brick.style.backgroundColor;
         e.target.style.borderLeftColor = brick.style.backgroundColor;
+        e.target.style.borderRight = "1px solid black";
+        e.target.classList.add(`${legoNum}`);
         spaces[spaces.indexOf(e.target) - 1].setAttribute('id', 'legoLeftEnd');
         spaces[spaces.indexOf(e.target) - 1].classList.add('placed');
         spaces[spaces.indexOf(e.target) - 1].style.backgroundColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 1].style.borderRightColor = brick.style.backgroundColor;
+        spaces[spaces.indexOf(e.target) - 1].style.borderLeft = "1px solid black";
+        spaces[spaces.indexOf(e.target) - 1].classList.add(`${legoNum}`);
         
         
-        
+        legoNum++;
         console.log(idNumUnder);
     }
 
@@ -205,22 +213,28 @@ function dragdrop(e){
         e.target.classList.add('placed');
         e.target.style.backgroundColor = brick.style.backgroundColor;
         e.target.style.borderLeftColor = brick.style.backgroundColor;
+        e.target.style.borderRight = "1px solid black";
+        e.target.classList.add(`${legoNum}`);
         spaces[spaces.indexOf(e.target) - 1].setAttribute('id', 'legoMiddle');
         spaces[spaces.indexOf(e.target) - 1].classList.add('placed');
         spaces[spaces.indexOf(e.target) - 1].style.backgroundColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 1].style.borderRightColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 1].style.borderLeftColor = brick.style.backgroundColor;
+        spaces[spaces.indexOf(e.target) - 1].classList.add(`${legoNum}`);
         spaces[spaces.indexOf(e.target) - 2].setAttribute('id', 'legoMiddle');
         spaces[spaces.indexOf(e.target) - 2].classList.add('placed');
         spaces[spaces.indexOf(e.target) - 2].style.backgroundColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 2].style.borderRightColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 2].style.borderLeftColor = brick.style.backgroundColor;
+        spaces[spaces.indexOf(e.target) - 2].classList.add(`${legoNum}`);
         spaces[spaces.indexOf(e.target) - 3].setAttribute('id', 'legoLeftEnd');
         spaces[spaces.indexOf(e.target) - 3].classList.add('placed');
         spaces[spaces.indexOf(e.target) - 3].style.backgroundColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 3].style.borderRightColor = brick.style.backgroundColor;
+        spaces[spaces.indexOf(e.target) - 3].style.borderLeft = "1px solid black";
+        spaces[spaces.indexOf(e.target) - 3].classList.add(`${legoNum}`);
         
-        
+        legoNum++;
         
         console.log(idNumUnder);
     }
@@ -230,32 +244,40 @@ function dragdrop(e){
         e.target.classList.add('placed');
         e.target.style.backgroundColor = brick.style.backgroundColor;
         e.target.style.borderLeftColor = brick.style.backgroundColor;
+        e.target.style.borderRight = "1px solid black";
+        e.target.classList.add(`${legoNum}`);
         spaces[spaces.indexOf(e.target) - 1].setAttribute('id', 'legoMiddle');
         spaces[spaces.indexOf(e.target) - 1].classList.add('placed');
         spaces[spaces.indexOf(e.target) - 1].style.backgroundColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 1].style.borderRightColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 1].style.borderLeftColor = brick.style.backgroundColor;
+        spaces[spaces.indexOf(e.target) - 1].classList.add(`${legoNum}`);
         spaces[spaces.indexOf(e.target) - 2].setAttribute('id', 'legoMiddle');
         spaces[spaces.indexOf(e.target) - 2].classList.add('placed');
         spaces[spaces.indexOf(e.target) - 2].style.backgroundColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 2].style.borderRightColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 2].style.borderLeftColor = brick.style.backgroundColor;
+        spaces[spaces.indexOf(e.target) - 2].classList.add(`${legoNum}`);
         spaces[spaces.indexOf(e.target) - 3].setAttribute('id', 'legoMiddle');
         spaces[spaces.indexOf(e.target) - 3].classList.add('placed');
         spaces[spaces.indexOf(e.target) - 3].style.backgroundColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 3].style.borderRightColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 3].style.borderLeftColor = brick.style.backgroundColor;
+        spaces[spaces.indexOf(e.target) - 3].classList.add(`${legoNum}`);
         spaces[spaces.indexOf(e.target) - 4].setAttribute('id', 'legoMiddle');
         spaces[spaces.indexOf(e.target) - 4].classList.add('placed');
         spaces[spaces.indexOf(e.target) - 4].style.backgroundColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 4].style.borderRightColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 4].style.borderLeftColor = brick.style.backgroundColor;
+        spaces[spaces.indexOf(e.target) - 4].classList.add(`${legoNum}`);
         spaces[spaces.indexOf(e.target) - 5].setAttribute('id', 'legoLeftEnd');
         spaces[spaces.indexOf(e.target) - 5].classList.add('placed');
         spaces[spaces.indexOf(e.target) - 5].style.backgroundColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 5].style.borderRightColor = brick.style.backgroundColor;
+        spaces[spaces.indexOf(e.target) - 5].style.borderLeft = "1px solid black";
+        spaces[spaces.indexOf(e.target) - 5].classList.add(`${legoNum}`);
         
-        
+        legoNum++;
         
         console.log(idNumUnder);
     }
@@ -265,42 +287,52 @@ function dragdrop(e){
         e.target.classList.add('placed');
         e.target.style.backgroundColor = brick.style.backgroundColor;
         e.target.style.borderLeftColor = brick.style.backgroundColor;
+        e.target.style.borderRight = "1px solid black";
+        e.target.classList.add(`${legoNum}`);
         spaces[spaces.indexOf(e.target) - 1].setAttribute('id', 'legoMiddle');
         spaces[spaces.indexOf(e.target) - 1].classList.add('placed');
         spaces[spaces.indexOf(e.target) - 1].style.backgroundColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 1].style.borderRightColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 1].style.borderLeftColor = brick.style.backgroundColor;
+        spaces[spaces.indexOf(e.target) - 1].classList.add(`${legoNum}`);
         spaces[spaces.indexOf(e.target) - 2].setAttribute('id', 'legoMiddle');
         spaces[spaces.indexOf(e.target) - 2].classList.add('placed');
         spaces[spaces.indexOf(e.target) - 2].style.backgroundColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 2].style.borderRightColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 2].style.borderLeftColor = brick.style.backgroundColor;
+        spaces[spaces.indexOf(e.target) - 2].classList.add(`${legoNum}`);
         spaces[spaces.indexOf(e.target) - 3].setAttribute('id', 'legoMiddle');
         spaces[spaces.indexOf(e.target) - 3].classList.add('placed');
         spaces[spaces.indexOf(e.target) - 3].style.backgroundColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 3].style.borderRightColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 3].style.borderLeftColor = brick.style.backgroundColor;
+        spaces[spaces.indexOf(e.target) - 3].classList.add(`${legoNum}`);
         spaces[spaces.indexOf(e.target) - 4].setAttribute('id', 'legoMiddle');
         spaces[spaces.indexOf(e.target) - 4].classList.add('placed');
         spaces[spaces.indexOf(e.target) - 4].style.backgroundColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 4].style.borderRightColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 4].style.borderLeftColor = brick.style.backgroundColor;
+        spaces[spaces.indexOf(e.target) - 4].classList.add(`${legoNum}`);
         spaces[spaces.indexOf(e.target) - 5].setAttribute('id', 'legoMiddle');
         spaces[spaces.indexOf(e.target) - 5].classList.add('placed');
         spaces[spaces.indexOf(e.target) - 5].style.backgroundColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 5].style.borderRightColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 5].style.borderLeftColor = brick.style.backgroundColor;
+        spaces[spaces.indexOf(e.target) - 5].classList.add(`${legoNum}`);
         spaces[spaces.indexOf(e.target) - 6].setAttribute('id', 'legoMiddle');
         spaces[spaces.indexOf(e.target) - 6].classList.add('placed');
         spaces[spaces.indexOf(e.target) - 6].style.backgroundColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 6].style.borderRightColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 6].style.borderLeftColor = brick.style.backgroundColor;
+        spaces[spaces.indexOf(e.target) - 6].classList.add(`${legoNum}`);
         spaces[spaces.indexOf(e.target) - 7].setAttribute('id', 'legoLeftEnd');
         spaces[spaces.indexOf(e.target) - 7].classList.add('placed');
         spaces[spaces.indexOf(e.target) - 7].style.backgroundColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 7].style.borderRightColor = brick.style.backgroundColor;
+        spaces[spaces.indexOf(e.target) - 7].style.borderLeft = "1px solid black";
+        spaces[spaces.indexOf(e.target) - 7].classList.add(`${legoNum}`);
         
-        
+        legoNum++;
         
         console.log(idNumUnder);
     }
@@ -310,52 +342,64 @@ function dragdrop(e){
         e.target.classList.add('placed');
         e.target.style.backgroundColor = brick.style.backgroundColor;
         e.target.style.borderLeftColor = brick.style.backgroundColor;
+        e.target.style.borderRight = "1px solid black";
+        e.target.classList.add(`${legoNum}`);
         spaces[spaces.indexOf(e.target) - 1].setAttribute('id', 'legoMiddle');
         spaces[spaces.indexOf(e.target) - 1].classList.add('placed');
         spaces[spaces.indexOf(e.target) - 1].style.backgroundColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 1].style.borderRightColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 1].style.borderLeftColor = brick.style.backgroundColor;
+        spaces[spaces.indexOf(e.target) - 1].classList.add(`${legoNum}`);
         spaces[spaces.indexOf(e.target) - 2].setAttribute('id', 'legoMiddle');
         spaces[spaces.indexOf(e.target) - 2].classList.add('placed');
         spaces[spaces.indexOf(e.target) - 2].style.backgroundColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 2].style.borderRightColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 2].style.borderLeftColor = brick.style.backgroundColor;
+        spaces[spaces.indexOf(e.target) - 2].classList.add(`${legoNum}`);
         spaces[spaces.indexOf(e.target) - 3].setAttribute('id', 'legoMiddle');
         spaces[spaces.indexOf(e.target) - 3].classList.add('placed');
         spaces[spaces.indexOf(e.target) - 3].style.backgroundColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 3].style.borderRightColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 3].style.borderLeftColor = brick.style.backgroundColor;
+        spaces[spaces.indexOf(e.target) - 3].classList.add(`${legoNum}`);
         spaces[spaces.indexOf(e.target) - 4].setAttribute('id', 'legoMiddle');
         spaces[spaces.indexOf(e.target) - 4].classList.add('placed');
         spaces[spaces.indexOf(e.target) - 4].style.backgroundColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 4].style.borderRightColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 4].style.borderLeftColor = brick.style.backgroundColor;
+        spaces[spaces.indexOf(e.target) - 4].classList.add(`${legoNum}`);
         spaces[spaces.indexOf(e.target) - 5].setAttribute('id', 'legoMiddle');
         spaces[spaces.indexOf(e.target) - 5].classList.add('placed');
         spaces[spaces.indexOf(e.target) - 5].style.backgroundColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 5].style.borderRightColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 5].style.borderLeftColor = brick.style.backgroundColor;
+        spaces[spaces.indexOf(e.target) - 5].classList.add(`${legoNum}`);
         spaces[spaces.indexOf(e.target) - 6].setAttribute('id', 'legoMiddle');
         spaces[spaces.indexOf(e.target) - 6].classList.add('placed');
         spaces[spaces.indexOf(e.target) - 6].style.backgroundColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 6].style.borderRightColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 6].style.borderLeftColor = brick.style.backgroundColor;
+        spaces[spaces.indexOf(e.target) - 6].classList.add(`${legoNum}`);
         spaces[spaces.indexOf(e.target) - 7].setAttribute('id', 'legoMiddle');
         spaces[spaces.indexOf(e.target) - 7].classList.add('placed');
         spaces[spaces.indexOf(e.target) - 7].style.backgroundColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 7].style.borderRightColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 7].style.borderLeftColor = brick.style.backgroundColor;
+        spaces[spaces.indexOf(e.target) - 7].classList.add(`${legoNum}`);
         spaces[spaces.indexOf(e.target) - 8].setAttribute('id', 'legoMiddle');
         spaces[spaces.indexOf(e.target) - 8].classList.add('placed');
         spaces[spaces.indexOf(e.target) - 8].style.backgroundColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 8].style.borderRightColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 8].style.borderLeftColor = brick.style.backgroundColor;
+        spaces[spaces.indexOf(e.target) - 8].classList.add(`${legoNum}`);
         spaces[spaces.indexOf(e.target) - 9].setAttribute('id', 'legoLeftEnd');
         spaces[spaces.indexOf(e.target) - 9].classList.add('placed');
         spaces[spaces.indexOf(e.target) - 9].style.backgroundColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 9].style.borderRightColor = brick.style.backgroundColor;
+        spaces[spaces.indexOf(e.target) - 9].style.borderLeft = "1px solid black";
+        spaces[spaces.indexOf(e.target) - 9].classList.add(`${legoNum}`);
         
-        
+        legoNum++;
         
         console.log(idNumUnder);
     }
@@ -368,8 +412,9 @@ function dragdrop(e){
             e.target.setAttribute('id', 'lego');
             e.target.classList.add('placed');
             e.target.style.backgroundColor = brick.style.backgroundColor;
+            e.target.classList.add(`${legoNum}`);
             console.log(idNumUnder);}
-        
+        legoNum++;
     }
 
     else if(e.target && brick2 === true){
@@ -380,12 +425,17 @@ function dragdrop(e){
         e.target.classList.add('placed');
         e.target.style.backgroundColor = brick.style.backgroundColor;
         e.target.style.borderLeftColor = brick.style.backgroundColor;
+        e.target.style.borderRight = "1px solid black";
+        e.target.classList.add(`${legoNum}`);
         spaces[spaces.indexOf(e.target) - 1].setAttribute('id', 'legoLeftEnd');
         spaces[spaces.indexOf(e.target) - 1].classList.add('placed');
         spaces[spaces.indexOf(e.target) - 1].style.backgroundColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 1].style.borderRightColor = brick.style.backgroundColor;
+        spaces[spaces.indexOf(e.target) - 1].style.borderLeft = "1px solid black";
+        spaces[spaces.indexOf(e.target) - 1].classList.add(`${legoNum}`);
         
     }
+    legoNum++;
     }
     else if(e.target && brick3 === true){
         let underTarget = spaces[idNumUnder];
@@ -395,22 +445,28 @@ function dragdrop(e){
         e.target.classList.add('placed');
         e.target.style.backgroundColor = brick.style.backgroundColor;
         e.target.style.borderLeftColor = brick.style.backgroundColor;
+        e.target.style.borderRight = "1px solid black";
+        e.target.classList.add(`${legoNum}`);
         spaces[spaces.indexOf(e.target) - 1].setAttribute('id', 'legoMiddle');
         spaces[spaces.indexOf(e.target) - 1].classList.add('placed');
         spaces[spaces.indexOf(e.target) - 1].style.backgroundColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 1].style.borderRightColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 1].style.borderLeftColor = brick.style.backgroundColor;
+        spaces[spaces.indexOf(e.target) - 1].classList.add(`${legoNum}`);
         spaces[spaces.indexOf(e.target) - 2].setAttribute('id', 'legoMiddle');
         spaces[spaces.indexOf(e.target) - 2].classList.add('placed');
         spaces[spaces.indexOf(e.target) - 2].style.backgroundColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 2].style.borderRightColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 2].style.borderLeftColor = brick.style.backgroundColor;
+        spaces[spaces.indexOf(e.target) - 2].classList.add(`${legoNum}`);
         spaces[spaces.indexOf(e.target) - 3].setAttribute('id', 'legoLeftEnd');
         spaces[spaces.indexOf(e.target) - 3].classList.add('placed');
         spaces[spaces.indexOf(e.target) - 3].style.backgroundColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 3].style.borderRightColor = brick.style.backgroundColor;
+        spaces[spaces.indexOf(e.target) - 3].style.borderLeft = "1px solid black";
+        spaces[spaces.indexOf(e.target) - 3].classList.add(`${legoNum}`);
             console.log(idNumUnder);}
-        
+        legoNum++;
     }
 
     else if(e.target && brick4 === true){
@@ -421,32 +477,40 @@ function dragdrop(e){
         e.target.classList.add('placed');
         e.target.style.backgroundColor = brick.style.backgroundColor;
         e.target.style.borderLeftColor = brick.style.backgroundColor;
+        e.target.style.borderRight = "1px solid black";
+        e.target.classList.add(`${legoNum}`);
         spaces[spaces.indexOf(e.target) - 1].setAttribute('id', 'legoMiddle');
         spaces[spaces.indexOf(e.target) - 1].classList.add('placed');
         spaces[spaces.indexOf(e.target) - 1].style.backgroundColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 1].style.borderRightColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 1].style.borderLeftColor = brick.style.backgroundColor;
+        spaces[spaces.indexOf(e.target) - 1].classList.add(`${legoNum}`);
         spaces[spaces.indexOf(e.target) - 2].setAttribute('id', 'legoMiddle');
         spaces[spaces.indexOf(e.target) - 2].classList.add('placed');
         spaces[spaces.indexOf(e.target) - 2].style.backgroundColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 2].style.borderRightColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 2].style.borderLeftColor = brick.style.backgroundColor;
+        spaces[spaces.indexOf(e.target) - 2].classList.add(`${legoNum}`);
         spaces[spaces.indexOf(e.target) - 3].setAttribute('id', 'legoMiddle');
         spaces[spaces.indexOf(e.target) - 3].classList.add('placed');
         spaces[spaces.indexOf(e.target) - 3].style.backgroundColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 3].style.borderRightColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 3].style.borderLeftColor = brick.style.backgroundColor;
+        spaces[spaces.indexOf(e.target) - 3].classList.add(`${legoNum}`);
         spaces[spaces.indexOf(e.target) - 4].setAttribute('id', 'legoMiddle');
         spaces[spaces.indexOf(e.target) - 4].classList.add('placed');
         spaces[spaces.indexOf(e.target) - 4].style.backgroundColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 4].style.borderRightColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 4].style.borderLeftColor = brick.style.backgroundColor;
+        spaces[spaces.indexOf(e.target) - 4].classList.add(`${legoNum}`);
         spaces[spaces.indexOf(e.target) - 5].setAttribute('id', 'legoLeftEnd');
         spaces[spaces.indexOf(e.target) - 5].classList.add('placed');
         spaces[spaces.indexOf(e.target) - 5].style.backgroundColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 5].style.borderRightColor = brick.style.backgroundColor;
+        spaces[spaces.indexOf(e.target) - 5].style.borderLeft = "1px solid black";
+        spaces[spaces.indexOf(e.target) - 5].classList.add(`${legoNum}`);
             console.log(idNumUnder);}
-        
+        legoNum++;
     }
 
     else if(e.target && brick5 === true){
@@ -454,101 +518,125 @@ function dragdrop(e){
         let overTarget = spaces[idNumOver];
         if(underTarget.classList.contains('placed')  || spaces[idNumUnder - 1].classList.contains('placed') || spaces[idNumUnder - 2].classList.contains('placed') || spaces[idNumUnder - 3].classList.contains('placed') || spaces[idNumUnder - 4].classList.contains('placed') || spaces[idNumUnder - 5].classList.contains('placed') || spaces[idNumUnder - 6].classList.contains('placed') || spaces[idNumUnder - 7].classList.contains('placed')    || overTarget.classList.contains('placed')  || spaces[idNumOver - 1].classList.contains('placed') || spaces[idNumOver - 2].classList.contains('placed') || spaces[idNumOver - 3].classList.contains('placed') || spaces[idNumOver - 4].classList.contains('placed') || spaces[idNumOver - 5].classList.contains('placed') || spaces[idNumOver - 6].classList.contains('placed') || spaces[idNumOver - 7].classList.contains('placed')){
             e.target.setAttribute('id', 'legoRightEnd');
-        e.target.classList.add('placed');
-        e.target.style.backgroundColor = brick.style.backgroundColor;
-        e.target.style.borderLeftColor = brick.style.backgroundColor;
-        spaces[spaces.indexOf(e.target) - 1].setAttribute('id', 'legoMiddle');
-        spaces[spaces.indexOf(e.target) - 1].classList.add('placed');
-        spaces[spaces.indexOf(e.target) - 1].style.backgroundColor = brick.style.backgroundColor;
-        spaces[spaces.indexOf(e.target) - 1].style.borderRightColor = brick.style.backgroundColor;
-        spaces[spaces.indexOf(e.target) - 1].style.borderLeftColor = brick.style.backgroundColor;
-        spaces[spaces.indexOf(e.target) - 2].setAttribute('id', 'legoMiddle');
-        spaces[spaces.indexOf(e.target) - 2].classList.add('placed');
-        spaces[spaces.indexOf(e.target) - 2].style.backgroundColor = brick.style.backgroundColor;
-        spaces[spaces.indexOf(e.target) - 2].style.borderRightColor = brick.style.backgroundColor;
-        spaces[spaces.indexOf(e.target) - 2].style.borderLeftColor = brick.style.backgroundColor;
-        spaces[spaces.indexOf(e.target) - 3].setAttribute('id', 'legoMiddle');
-        spaces[spaces.indexOf(e.target) - 3].classList.add('placed');
-        spaces[spaces.indexOf(e.target) - 3].style.backgroundColor = brick.style.backgroundColor;
-        spaces[spaces.indexOf(e.target) - 3].style.borderRightColor = brick.style.backgroundColor;
-        spaces[spaces.indexOf(e.target) - 3].style.borderLeftColor = brick.style.backgroundColor;
-        spaces[spaces.indexOf(e.target) - 4].setAttribute('id', 'legoMiddle');
-        spaces[spaces.indexOf(e.target) - 4].classList.add('placed');
-        spaces[spaces.indexOf(e.target) - 4].style.backgroundColor = brick.style.backgroundColor;
-        spaces[spaces.indexOf(e.target) - 4].style.borderRightColor = brick.style.backgroundColor;
-        spaces[spaces.indexOf(e.target) - 4].style.borderLeftColor = brick.style.backgroundColor;
-        spaces[spaces.indexOf(e.target) - 5].setAttribute('id', 'legoMiddle');
-        spaces[spaces.indexOf(e.target) - 5].classList.add('placed');
-        spaces[spaces.indexOf(e.target) - 5].style.backgroundColor = brick.style.backgroundColor;
-        spaces[spaces.indexOf(e.target) - 5].style.borderRightColor = brick.style.backgroundColor;
-        spaces[spaces.indexOf(e.target) - 5].style.borderLeftColor = brick.style.backgroundColor;
-        spaces[spaces.indexOf(e.target) - 6].setAttribute('id', 'legoMiddle');
-        spaces[spaces.indexOf(e.target) - 6].classList.add('placed');
-        spaces[spaces.indexOf(e.target) - 6].style.backgroundColor = brick.style.backgroundColor;
-        spaces[spaces.indexOf(e.target) - 6].style.borderRightColor = brick.style.backgroundColor;
-        spaces[spaces.indexOf(e.target) - 6].style.borderLeftColor = brick.style.backgroundColor;
-        spaces[spaces.indexOf(e.target) - 7].setAttribute('id', 'legoLeftEnd');
-        spaces[spaces.indexOf(e.target) - 7].classList.add('placed');
-        spaces[spaces.indexOf(e.target) - 7].style.backgroundColor = brick.style.backgroundColor;
-        spaces[spaces.indexOf(e.target) - 7].style.borderRightColor = brick.style.backgroundColor;
+            e.target.classList.add('placed');
+            e.target.style.backgroundColor = brick.style.backgroundColor;
+            e.target.style.borderLeftColor = brick.style.backgroundColor;
+            e.target.style.borderRight = "1px solid black";
+            e.target.classList.add(`${legoNum}`);
+            spaces[spaces.indexOf(e.target) - 1].setAttribute('id', 'legoMiddle');
+            spaces[spaces.indexOf(e.target) - 1].classList.add('placed');
+            spaces[spaces.indexOf(e.target) - 1].style.backgroundColor = brick.style.backgroundColor;
+            spaces[spaces.indexOf(e.target) - 1].style.borderRightColor = brick.style.backgroundColor;
+            spaces[spaces.indexOf(e.target) - 1].style.borderLeftColor = brick.style.backgroundColor;
+            spaces[spaces.indexOf(e.target) - 1].classList.add(`${legoNum}`);
+            spaces[spaces.indexOf(e.target) - 2].setAttribute('id', 'legoMiddle');
+            spaces[spaces.indexOf(e.target) - 2].classList.add('placed');
+            spaces[spaces.indexOf(e.target) - 2].style.backgroundColor = brick.style.backgroundColor;
+            spaces[spaces.indexOf(e.target) - 2].style.borderRightColor = brick.style.backgroundColor;
+            spaces[spaces.indexOf(e.target) - 2].style.borderLeftColor = brick.style.backgroundColor;
+            spaces[spaces.indexOf(e.target) - 2].classList.add(`${legoNum}`);
+            spaces[spaces.indexOf(e.target) - 3].setAttribute('id', 'legoMiddle');
+            spaces[spaces.indexOf(e.target) - 3].classList.add('placed');
+            spaces[spaces.indexOf(e.target) - 3].style.backgroundColor = brick.style.backgroundColor;
+            spaces[spaces.indexOf(e.target) - 3].style.borderRightColor = brick.style.backgroundColor;
+            spaces[spaces.indexOf(e.target) - 3].style.borderLeftColor = brick.style.backgroundColor;
+            spaces[spaces.indexOf(e.target) - 3].classList.add(`${legoNum}`);
+            spaces[spaces.indexOf(e.target) - 4].setAttribute('id', 'legoMiddle');
+            spaces[spaces.indexOf(e.target) - 4].classList.add('placed');
+            spaces[spaces.indexOf(e.target) - 4].style.backgroundColor = brick.style.backgroundColor;
+            spaces[spaces.indexOf(e.target) - 4].style.borderRightColor = brick.style.backgroundColor;
+            spaces[spaces.indexOf(e.target) - 4].style.borderLeftColor = brick.style.backgroundColor;
+            spaces[spaces.indexOf(e.target) - 4].classList.add(`${legoNum}`);
+            spaces[spaces.indexOf(e.target) - 5].setAttribute('id', 'legoMiddle');
+            spaces[spaces.indexOf(e.target) - 5].classList.add('placed');
+            spaces[spaces.indexOf(e.target) - 5].style.backgroundColor = brick.style.backgroundColor;
+            spaces[spaces.indexOf(e.target) - 5].style.borderRightColor = brick.style.backgroundColor;
+            spaces[spaces.indexOf(e.target) - 5].style.borderLeftColor = brick.style.backgroundColor;
+            spaces[spaces.indexOf(e.target) - 5].classList.add(`${legoNum}`);
+            spaces[spaces.indexOf(e.target) - 6].setAttribute('id', 'legoMiddle');
+            spaces[spaces.indexOf(e.target) - 6].classList.add('placed');
+            spaces[spaces.indexOf(e.target) - 6].style.backgroundColor = brick.style.backgroundColor;
+            spaces[spaces.indexOf(e.target) - 6].style.borderRightColor = brick.style.backgroundColor;
+            spaces[spaces.indexOf(e.target) - 6].style.borderLeftColor = brick.style.backgroundColor;
+            spaces[spaces.indexOf(e.target) - 6].classList.add(`${legoNum}`);
+            spaces[spaces.indexOf(e.target) - 7].setAttribute('id', 'legoLeftEnd');
+            spaces[spaces.indexOf(e.target) - 7].classList.add('placed');
+            spaces[spaces.indexOf(e.target) - 7].style.backgroundColor = brick.style.backgroundColor;
+            spaces[spaces.indexOf(e.target) - 7].style.borderRightColor = brick.style.backgroundColor;
+            spaces[spaces.indexOf(e.target) - 7].style.borderLeft = "1px solid black";
+            spaces[spaces.indexOf(e.target) - 7].classList.add(`${legoNum}`);
             console.log(idNumUnder);}
-        
+        legoNum++;
     }
 
     else if(e.target && brick6 === true){
         let underTarget = spaces[idNumUnder];
         let overTarget = spaces[idNumOver];
         if(underTarget.classList.contains('placed')  || spaces[idNumUnder - 1].classList.contains('placed') || spaces[idNumUnder - 2].classList.contains('placed') || spaces[idNumUnder - 3].classList.contains('placed') || spaces[idNumUnder - 4].classList.contains('placed') || spaces[idNumUnder - 5].classList.contains('placed') || spaces[idNumUnder - 6].classList.contains('placed') || spaces[idNumUnder - 7].classList.contains('placed') || spaces[idNumUnder - 8].classList.contains('placed') || spaces[idNumUnder - 9].classList.contains('placed')    || overTarget.classList.contains('placed')  || spaces[idNumOver - 1].classList.contains('placed') || spaces[idNumOver - 2].classList.contains('placed') || spaces[idNumOver - 3].classList.contains('placed') || spaces[idNumOver - 4].classList.contains('placed') || spaces[idNumOver - 5].classList.contains('placed') || spaces[idNumOver - 6].classList.contains('placed') || spaces[idNumOver - 7].classList.contains('placed') || spaces[idNumOver - 8].classList.contains('placed') || spaces[idNumOver - 9].classList.contains('placed')){
-            e.target.setAttribute('id', 'legoRightEnd');
+        e.target.setAttribute('id', 'legoRightEnd');
         e.target.classList.add('placed');
+        e.target.classList.add(`${legoNum}`);
         e.target.style.backgroundColor = brick.style.backgroundColor;
         e.target.style.borderLeftColor = brick.style.backgroundColor;
+        e.target.style.borderRight = "1px solid black"
         spaces[spaces.indexOf(e.target) - 1].setAttribute('id', 'legoMiddle');
         spaces[spaces.indexOf(e.target) - 1].classList.add('placed');
+        spaces[spaces.indexOf(e.target) - 1].classList.add(`${legoNum}`);
         spaces[spaces.indexOf(e.target) - 1].style.backgroundColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 1].style.borderRightColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 1].style.borderLeftColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 2].setAttribute('id', 'legoMiddle');
         spaces[spaces.indexOf(e.target) - 2].classList.add('placed');
+        spaces[spaces.indexOf(e.target) - 2].classList.add(`${legoNum}`);
         spaces[spaces.indexOf(e.target) - 2].style.backgroundColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 2].style.borderRightColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 2].style.borderLeftColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 3].setAttribute('id', 'legoMiddle');
         spaces[spaces.indexOf(e.target) - 3].classList.add('placed');
+        spaces[spaces.indexOf(e.target) - 3].classList.add(`${legoNum}`);
         spaces[spaces.indexOf(e.target) - 3].style.backgroundColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 3].style.borderRightColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 3].style.borderLeftColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 4].setAttribute('id', 'legoMiddle');
         spaces[spaces.indexOf(e.target) - 4].classList.add('placed');
+        spaces[spaces.indexOf(e.target) - 4].classList.add(`${legoNum}`);
         spaces[spaces.indexOf(e.target) - 4].style.backgroundColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 4].style.borderRightColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 4].style.borderLeftColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 5].setAttribute('id', 'legoMiddle');
         spaces[spaces.indexOf(e.target) - 5].classList.add('placed');
+        spaces[spaces.indexOf(e.target) - 5].classList.add(`${legoNum}`);
         spaces[spaces.indexOf(e.target) - 5].style.backgroundColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 5].style.borderRightColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 5].style.borderLeftColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 6].setAttribute('id', 'legoMiddle');
         spaces[spaces.indexOf(e.target) - 6].classList.add('placed');
+        spaces[spaces.indexOf(e.target) - 6].classList.add(`${legoNum}`);
         spaces[spaces.indexOf(e.target) - 6].style.backgroundColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 6].style.borderRightColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 6].style.borderLeftColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 7].setAttribute('id', 'legoMiddle');
         spaces[spaces.indexOf(e.target) - 7].classList.add('placed');
+        spaces[spaces.indexOf(e.target) - 7].classList.add(`${legoNum}`);
         spaces[spaces.indexOf(e.target) - 7].style.backgroundColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 7].style.borderRightColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 7].style.borderLeftColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 8].setAttribute('id', 'legoMiddle');
         spaces[spaces.indexOf(e.target) - 8].classList.add('placed');
+        spaces[spaces.indexOf(e.target) - 8].classList.add(`${legoNum}`);
         spaces[spaces.indexOf(e.target) - 8].style.backgroundColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 8].style.borderRightColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 8].style.borderLeftColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 9].setAttribute('id', 'legoLeftEnd');
         spaces[spaces.indexOf(e.target) - 9].classList.add('placed');
+        spaces[spaces.indexOf(e.target) - 9].classList.add(`${legoNum}`);
         spaces[spaces.indexOf(e.target) - 9].style.backgroundColor = brick.style.backgroundColor;
         spaces[spaces.indexOf(e.target) - 9].style.borderRightColor = brick.style.backgroundColor;
-            console.log(idNumUnder);}
+        spaces[spaces.indexOf(e.target) - 9].style.borderLeft = "1px solid black";
         
+        
+        console.log(idNumUnder);}
+        legoNum++;
     }
    
     
@@ -580,10 +668,7 @@ for(let i = 0; i<rows.length; i++){
 
 
 
-// function getID(e){
-//     let idNumUnder = spaces.indexOf(e.target);
-//     return (idNumUnder + 109);
-//    } 
+
 
 
 let clear = document.querySelector('.clear');
@@ -610,25 +695,31 @@ function changeColor(e){
 }
 
 
+let undo = document.querySelector('.undo');
 
-// for(let space of spaces){
-//     let leftBrick = document.getElementById('legoLeftEnd');
-//     let rightBrick = document.getElementById('legoRightEnd');
-//     let middleBrick = document.getElementById('legoMiddle');
+undo.addEventListener("click", undoBrick);
 
-//     if(leftBrick){
-//         space.style.backgroundColor = lego.style.backgroundColor;
-//         space.style.rightBorder = "1px " + lego.style,backgroundColor;
-//     }
-
-//     if(middleBrick){
-//         space.style.backgroundColor = lego.style.backgroundColor;
-//         space.style.rightBorder = "1px " + lego.style,backgroundColor;
-//         space.style.leftBorder = "1px " + lego.style,backgroundColor;
-//     }
-
-//     if(righttBrick){
-//         space.style.backgroundColor = lego.style.backgroundColor;
-//         space.style.leftBorder = "1px " + lego.style,backgroundColor;
-//     }
-// }
+function undoBrick(e){
+    e.preventDefault();
+    
+    
+    spaces.forEach(space => {
+        let brickNo = legoNum - 1;
+        if(space.classList[4] == legoNum - 1){
+            
+            space.style.border == "1px solid white";
+            space.style.backgroundColor = "transparent";
+            space.removeAttribute('id');
+            space.classList.remove('placed');
+            space.style.borderLeft = '1px solid white';
+            space.style.borderRight = '1px solid white';
+            space.classList.remove(`${brickNo}`);
+            
+            }
+            
+        else{return}
+    })
+    if(legoNum >= 2){legoNum--;}
+    else{legoNum = 1;}
+    console.log(legoNum)
+}

@@ -133,15 +133,15 @@ body{
 .clear{
     position: absolute;
     left:44px;
-    top:370px;
+    top:400px;
     font-family: 'Courier New', Courier, monospace;
 }
 
 
 .colorPicker{
     position: absolute;
-    top: 400px;
-    left:25px;
+    top: 370px;
+    left:26px;
 }
 #color{
     position: relative;
@@ -187,6 +187,13 @@ body{
 .blue{
     background-color: blue;
     border: 2px black solid;
+}
+
+.undo{
+    position: absolute;
+    top: 433px;
+    left: 64px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 
