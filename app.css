@@ -1,5 +1,5 @@
 body{
-    background-color: rgba(126, 135, 129, 0.616);
+    background-color: rgb(110, 111, 127);
 }
 #blockChoice{
     display:inline-block;
@@ -12,6 +12,13 @@ body{
     position: relative;
     background-color: white;
     
+}
+
+.instructions{
+    color: white;
+    position: absolute;
+    width: 200px;
+    left: 15px;
 }
 
 #lego:active{
@@ -159,37 +166,37 @@ body{
 
 .white{
     background-color: white;
-    border: 2px black solid;
+    border: 2px rgb(183, 190, 255) solid;
 }
 
 .silver{
     background-color: silver;
-    border: 2px black solid;
+    border: 2px rgb(255, 255, 255) solid;
 }
 
 .black{
     background-color: black;
-    border: 2px black solid;
+    border: 2px white solid;
 }
 
 .red{
     background-color: red;
-    border: 2px black solid;
+    border: 2px rgb(255, 255, 255) solid;
 }
 
 .yellow{
     background-color: yellow;
-    border: 2px black solid;
+    border: 2px rgb(255, 255, 255) solid;
 }
 
 .green{
     background-color: green;
-    border: 2px black solid;
+    border: 2px rgb(255, 255, 255) solid;
 }
 
 .blue{
     background-color: blue;
-    border: 2px black solid;
+    border: 2px rgb(255, 255, 255) solid;
 }
 
 .undo{
