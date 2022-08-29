@@ -112,11 +112,11 @@ body{
     border-left: dotted 2px rgb(245, 150, 41);
     border-right: dotted 2px rgb(245, 150, 41);
     border-top: dotted 2px rgb(245, 150, 41);
-    border-bottom: solid 3px rgb(245, 150, 41);
+    border-bottom: solid 3px rgb(89, 245, 41);
     line-height: 10px;
     justify-content: center;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.858);
+    background-color: rgb(255, 255, 255);
 }
 
 .pixel{
